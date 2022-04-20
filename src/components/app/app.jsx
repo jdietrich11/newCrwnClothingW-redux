@@ -1,39 +1,22 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 
-import Directory from "../directory/directory";
+import Header from "../../routes/header/header";
+import Home from "../../routes/home/home";
+import SignIn from "../../routes/sign-in/sign-in";
 
 import "./app.styles.scss";
 
-const categories = [
-  {
-    id: 1,
-    title: "hats",
-    imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
-  },
-  {
-    id: 2,
-    title: "jackets",
-    imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
-  },
-  {
-    id: 3,
-    title: "sneakers",
-    imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-  },
-  {
-    id: 4,
-    title: "womens",
-    imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-  },
-  {
-    id: 5,
-    title: "mens",
-    imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-  },
-];
-
 const App = () => {
-  return <Directory categories={categories} />;
+  return (
+    <div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sign-in" element={<SignIn />} />
+      </Routes>
+    </div>
+  );
 };
 
 export default App;
