@@ -10,7 +10,6 @@ import FormInput from "../form-input/form-input";
 import Button from "../button/button";
 
 import "./sign-in.scss";
-import { signInWithEmailAndPassword } from "firebase/auth";
 
 const defaultFormFields = {
   email: "",
