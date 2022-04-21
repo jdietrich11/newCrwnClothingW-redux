@@ -1,6 +1,6 @@
 import React from "react";
 
-import SignInForm from "../../components/sign-in/sing-in";
+import SignInForm from "../../components/sign-in/sign-in";
 import SignUpForm from "../../components/sign-up/sign-up";
 
 import "./auth.scss";
