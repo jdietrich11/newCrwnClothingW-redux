@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Header from "../../routes/header/header";
 import Home from "../../routes/home/home";
-import SignIn from "../../routes/sign-in/sign-in";
+import Authentication from "../../routes/authentication/authentication";
 
 import "./app.styles.scss";
 
@@ -13,7 +13,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/auth" element={<Authentication />} />
       </Routes>
     </div>
   );
