@@ -1,36 +1,31 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
-import { UserContext } from "../../components/user.context/user.context";
-import { signOutUser } from "../../utils/firebase/firebase.utils";
+import { UserContext } from '../../components/user.context/user.context';
 
-import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
+import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
 
-import "./header.scss";
+import './header.scss';
+import { signOutUser } from '../../utils/firebase/firebase.utils';
 
 const Header = () => {
-  const { currentUser, setCurrentUser } = useContext(UserContext);
-
-  const signOutHandler = async () => {
-    await signOutUser();
-    setCurrentUser(null);
-  };
+  const { currentUser } = useContext(UserContext);
 
   return (
-    <div className="navigation">
-      <Link className="logo-container" to="/">
-        <CrwnLogo className="logo" />
+    <div className='navigation'>
+      <Link className='logo-container' to='/'>
+        <CrwnLogo className='logo' />
       </Link>
-      <div className="nav-links-container">
-        <Link className="nav-link" to="/shop">
+      <div className='nav-links-container'>
+        <Link className='nav-link' to='/shop'>
           SHOP
         </Link>
         {currentUser ? (
-          <span onClick={signOutHandler} className="nav-link">
+          <span onClick={signOutUser} className='nav-link'>
             SIGN-OUT
           </span>
         ) : (
-          <Link className="nav-link" to="/auth">
+          <Link className='nav-link' to='/auth'>
             SIGN-IN
           </Link>
         )}
