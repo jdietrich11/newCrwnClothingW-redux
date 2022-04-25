@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-import { UserContext } from '../../components/user.context/user.context';
+import { UserContext } from '../../context/user.context';
 
 import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
 
