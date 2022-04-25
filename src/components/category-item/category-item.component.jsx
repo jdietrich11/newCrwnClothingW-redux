@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import "./category-item.scss";
+import './category-item.scss';
 
 const CategoryItem = ({ category }) => {
   const { imageUrl, title } = category;
   return (
-    <div className="category-container">
+    <div className='category-container'>
       <div
-        className="bacground-image"
+        className='background-image'
         style={{ backgroundImage: `url(${imageUrl})` }}
       />
-      <div className="category-body-container">
+      <div className='category-body-container'>
         <h2>{title}</h2>
         <p>SHOP NOW</p>
       </div>
